@@ -1,0 +1,19 @@
+<h1>Edit user</h1>
+<%= form_tag do %>
+ID: <%= text_field_tag(:id) %>
+<%= hidden_field_tag(:opt, 'search') %>
+<%= submit_tag("Search")%>
+<% end %>
+<br>
+
+<% if(@usr != nil) %>
+  <%= form_tag do %>
+  Names:<br> 
+<%= text_field_tag(:names, @usr.names) %><br>
+  Email:<br>
+<%= text_field_tag(:email, @usr.email) %><br>
+  <%= hidden_field_tag(:opt, 'update') %>
+  <%= hidden_field_tag(:id, @usr.id) %>
+  <%= submit_tag("Update")%>
+  <% end %>
+<% end %>

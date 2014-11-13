@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Clase1</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <header>
+    <a href="">Home</a>
+    <a href="/users/add">New user</a>
+    <a href="/users/edit">Edit user</a>
+    <a href="/users/delete">Delete user</a>
+    <a href="/users/list">List of users</a>
+  </header>
+
+<%= yield %>
+
+</body>
+</html>
